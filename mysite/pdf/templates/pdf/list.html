@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<title>Title of the document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>CV List</h2>
+            </div>
+            <div>
+                <a href="/" class="btn btn-success">Back</a>
+            </div>
+        </div>
+        {% for profile in profiles %}
+        <div class="row">
+            <div class="col-md-3">
+                <div>{{profile.name}}</div>
+            </div>
+            <div class="col-md-3">
+                <a href="/{{profile.id}}" class="btn btn-warning">Download CV</a>
+            </div>
+        </div>
+        </hr>
+        {% endfor %}
+    </div>
+
+</body>
+
+</html>
